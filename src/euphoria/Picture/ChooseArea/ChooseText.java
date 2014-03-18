@@ -1,4 +1,4 @@
-package euphoria.PictureChooseArea;
+package euphoria.Picture.ChooseArea;
 
 import javax.swing.JLabel;
 

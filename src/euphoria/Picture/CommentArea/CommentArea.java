@@ -1,4 +1,4 @@
-package euphoria.PictureCommentArea;
+package euphoria.Picture.CommentArea;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -25,7 +25,7 @@ public class CommentArea extends JPanel {
 		JLabel explanationLabel = new JLabel("写真の説明");
 		JTextField explanationField = new JTextField("説明を入力してください");
 
-		// 各コンポーネントのgridを設定する
+		// 各コンポーネントのgridの設定
 		gbc.gridx = 0;
 		gbc.gridy = 0;
 		gbc.weightx = 0.1d;

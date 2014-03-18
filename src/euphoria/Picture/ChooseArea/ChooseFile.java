@@ -1,4 +1,4 @@
-package euphoria.PictureChooseArea;
+package euphoria.Picture.ChooseArea;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -18,15 +18,17 @@ import javax.swing.JFileChooser;
 
 public class ChooseFile extends JButton implements ActionListener {
 
-	private ChooseText chooseFileText;
+	private ChooseText fileText;
+	private ChooseShow fileShow;
 
 	/**
 	 * コンストラクタ
 	 * @param ct 出力文字として対応付けるChooseText extends JLabelのインスタンス
 	 * @param str ボタンの名前
 	 */
-	ChooseFile(ChooseText ct, String str) {
-		chooseFileText = ct;
+	ChooseFile(ChooseText ct, ChooseShow cs, String str) {
+		fileText = ct;
+		fileShow = cs;
 		setText(str);
 		addActionListener(this);
 	}
@@ -39,11 +41,12 @@ public class ChooseFile extends JButton implements ActionListener {
 		int selected = filechooser.showOpenDialog(this);
 		if (selected == JFileChooser.APPROVE_OPTION) {
 			File file = filechooser.getSelectedFile();
-			chooseFileText.setLabelText(file.getAbsolutePath());
+			fileText.setLabelText(file.getAbsolutePath());
+			fileShow.showIcon(file.getAbsolutePath());
 		} else if (selected == JFileChooser.CANCEL_OPTION) {
-			chooseFileText.setLabelText("選択されていません");
+			fileText.setLabelText("選択されていません");
 		} else if (selected == JFileChooser.ERROR_OPTION) {
-			chooseFileText.setLabelText("エラー又は取消しがありました");
+			fileText.setLabelText("エラー又は取消しがありました");
 		}
 
 	}
