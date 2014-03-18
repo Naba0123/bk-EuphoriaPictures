@@ -6,14 +6,12 @@ import java.awt.Insets;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 
 public class ChooseArea extends JPanel {
 
 	public ChooseArea() {
 
 		// ChooseAreaの初期設定
-		setBorder(new EmptyBorder(5, 5, 5, 5));
 		GridBagLayout layout = new GridBagLayout();
 		setLayout(layout);
 		GridBagConstraints gbc = new GridBagConstraints();
@@ -31,7 +29,8 @@ public class ChooseArea extends JPanel {
 		gbc.gridy = 0;
 		gbc.weightx = 1.0d;
 		gbc.weighty = 0.0d;
-		gbc.insets = new Insets(2, 2, 2, 2);
+		gbc.insets = new Insets(5, 10, 10, 10);
+		gbc.anchor = GridBagConstraints.EAST;
 		layout.setConstraints(text, gbc);
 		gbc.gridx = 1;
 		gbc.weightx = 0.0d;
@@ -43,7 +42,6 @@ public class ChooseArea extends JPanel {
 		gbc.weighty = 1.0d;
 		gbc.fill = GridBagConstraints.BOTH;
 		layout.setConstraints(show, gbc);
-
 
 		// 各コンポーネントの組み込み
 		add(show);

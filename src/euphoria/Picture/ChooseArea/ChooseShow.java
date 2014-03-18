@@ -19,7 +19,7 @@ public class ChooseShow extends JLabel {
 
 	private BufferedImage image;
 
-	ChooseShow(){
+	public ChooseShow(){
 	}
 
 	public void showIcon(String str) {
@@ -55,7 +55,6 @@ public class ChooseShow extends JLabel {
 	private void calcSize() {
 		width = image.getWidth();
 		height = image.getHeight();
-		System.out.println(width);
 		double magnification = 0;
 		double magnificationX = 0;
 		double magnificationY = 0;
@@ -63,7 +62,6 @@ public class ChooseShow extends JLabel {
 		magnificationX = (standardX / (double) height);
 		magnificationY = (standardY / (double) width);
 		magnification = Math.min(magnificationX, magnificationY);
-		System.out.println(magnification);
 		if (magnification < 1) {
 			height = (int) (height * magnification);
 			width = (int) (width * magnification);
@@ -72,11 +70,8 @@ public class ChooseShow extends JLabel {
 
 	private void getStandardSize() {
 		Dimension maxSize = getSize();
-		System.out.println(maxSize.getWidth());
 		standardX = (int) maxSize.getHeight();
 		standardY = (int) maxSize.getWidth();
-		System.out.println("standartdX = " + standardX);
-		System.out.println("standartdY = " + standardY);
 	}
 
 }
