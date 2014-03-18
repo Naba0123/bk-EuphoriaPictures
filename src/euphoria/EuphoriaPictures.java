@@ -2,8 +2,6 @@ package euphoria;
 
 public class EuphoriaPictures {
 
-
-
 	/** メインフレ―ムのインスタンス */
 	private MainFrame mf;
 
