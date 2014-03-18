@@ -1,4 +1,4 @@
-package euphoria.Picture.UploadArea;
+package euphoria.Picture.ConfigArea;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -7,9 +7,9 @@ import java.awt.Insets;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-public class UploadArea extends JPanel {
+public class ConfigArea extends JPanel {
 
-	public UploadArea() {
+	public ConfigArea() {
 
 		// 初期設定
 		GridBagLayout layout = new GridBagLayout();
@@ -19,7 +19,7 @@ public class UploadArea extends JPanel {
 		// コンポーネントの定義
 		JButton button = new JButton("アップロード設定");
 		JButton button2 = new JButton("接続確認");
-		JButton button3 = new JButton("アップロードの実行");
+		JButton button3 = new JButton("アップロード実行");
 
 		// gridBagLayoutの設定
 		gbc.insets = new Insets(5, 5, 5, 5);

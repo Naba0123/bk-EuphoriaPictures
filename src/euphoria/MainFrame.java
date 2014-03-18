@@ -16,7 +16,7 @@ import javax.swing.border.TitledBorder;
 
 import euphoria.Picture.ChooseArea.ChooseArea;
 import euphoria.Picture.CommentArea.CommentArea;
-import euphoria.Picture.UploadArea.UploadArea;
+import euphoria.Picture.ConfigArea.ConfigArea;
 
 /**
  * メインフレームのクラス
@@ -40,7 +40,7 @@ public class MainFrame extends JFrame {
 	// 各コンポーネントの定義
 	private ChooseArea choose;
 	private CommentArea comment;
-	private UploadArea upload;
+	private ConfigArea upload;
 
 	// 初期化フィールド
 	{
@@ -64,7 +64,7 @@ public class MainFrame extends JFrame {
 		// 各コンポーネントの定義
 		choose = new ChooseArea();
 		comment = new CommentArea();
-		upload = new UploadArea();
+		upload = new ConfigArea();
 
 		// GridBagLayoutの定義
 		layout = new GridBagLayout();
