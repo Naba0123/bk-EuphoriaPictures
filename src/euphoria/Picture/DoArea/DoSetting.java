@@ -106,22 +106,25 @@ public class DoSetting extends JFrame {
 	}
 
 	private void setGrid() {
-		gbc.insets = new Insets(5, 5, 5, 5);
+		gbc.insets = new Insets(5, 15, 5, 5);
 		layout.addLayoutComponent(DoArea.userNameLabel, gbc);
 		gbc.gridy = 1;
 		layout.addLayoutComponent(DoArea.passWordLabel, gbc);
 		gbc.gridy = 2;
 		layout.addLayoutComponent(DoArea.keyPathLabel, gbc);
 		gbc.gridx = 2;
+		gbc.insets = new Insets(5, 5, 5, 15);
 		layout.addLayoutComponent(tmpKeyPathButton, gbc);
 		gbc.gridx = 0;
 		gbc.gridy = 3;
+		gbc.insets = new Insets(5, 15, 5, 5);
 		layout.addLayoutComponent(DoArea.hostNameLabel, gbc);
 		gbc.gridy = 4;
 		layout.addLayoutComponent(DoArea.portNumberLabel, gbc);
 		gbc.gridy = 5;
 		layout.addLayoutComponent(DoArea.uploadPathLabel, gbc);
 
+		gbc.insets = new Insets(5, 5, 5, 15);
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		gbc.gridx = 1;
 		gbc.gridy = 0;
@@ -132,9 +135,11 @@ public class DoSetting extends JFrame {
 		layout.addLayoutComponent(tmpPassWord, gbc);
 		gbc.gridwidth = 1;
 		gbc.gridy = 2;
+		gbc.insets = new Insets(5, 5, 5, 5);
 		layout.addLayoutComponent(tmpKeyPath, gbc);
 		gbc.gridwidth = 2;
 		gbc.gridy = 3;
+		gbc.insets = new Insets(5, 5, 5, 15);
 		layout.addLayoutComponent(tmpHostName, gbc);
 		gbc.gridy = 4;
 		layout.addLayoutComponent(tmpPortNumber, gbc);

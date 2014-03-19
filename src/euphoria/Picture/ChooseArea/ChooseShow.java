@@ -34,6 +34,8 @@ public class ChooseShow extends JLabel {
 		ImageIcon ii = new ImageIcon(image);
 		setIcon(ii);
 		this.setHorizontalAlignment(JLabel.CENTER);
+		image = null;
+		ii = null;
 	}
 
 	public BufferedImage resizeImage() {

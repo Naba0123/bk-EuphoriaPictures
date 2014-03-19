@@ -51,6 +51,8 @@ public class SettingOK extends JButton implements ActionListener {
 		DoArea.passWordField.setText(DoSetting.tmpPassWord.getText());
 		DoArea.keyPathField.setText(DoSetting.tmpKeyPath.getText());
 		DoArea.hostNameField.setText(DoSetting.tmpHostName.getText());
+		DoArea.portNumberField.setText(DoSetting.tmpPortNumber.getText());
+		DoArea.uploadPathField.setText(DoSetting.tmpUploadPath.getText());
 	}
 
 }

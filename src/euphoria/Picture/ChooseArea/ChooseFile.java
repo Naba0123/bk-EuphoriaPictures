@@ -20,7 +20,6 @@ public class ChooseFile extends JButton implements ActionListener {
 
 	/**
 	 * コンストラクタ
-	 * @param ct 出力文字として対応付けるChooseText extends JLabelのインスタンス
 	 * @param str ボタンの名前
 	 */
 	ChooseFile(String str) {
@@ -37,6 +36,7 @@ public class ChooseFile extends JButton implements ActionListener {
 		if (selected == JFileChooser.APPROVE_OPTION) {
 			File file = filechooser.getSelectedFile();
 			ChooseArea.chooseText.setText(file.getAbsolutePath());
+			ChooseArea.chooseShow.setIcon(null);
 			ChooseArea.chooseShow.showIcon(file.getAbsolutePath());
 		} else if (selected == JFileChooser.CANCEL_OPTION) {
 			if (!(ChooseArea.chooseShow.getIcon() != null))
@@ -81,9 +81,11 @@ public class ChooseFile extends JButton implements ActionListener {
 				g2.dispose();
 
 				thumbnail = new ImageIcon(img);
+				img = null; // 解放
 			} else {
 				thumbnail = tmpIcon;
 			}
+			tmpIcon = null; // 解放されてるのか？
 		}
 
 		@Override
