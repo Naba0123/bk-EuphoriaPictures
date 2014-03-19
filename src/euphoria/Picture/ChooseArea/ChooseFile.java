@@ -81,11 +81,11 @@ public class ChooseFile extends JButton implements ActionListener {
 				g2.dispose();
 
 				thumbnail = new ImageIcon(img);
-				img = null; // 解放
+				img = null;
 			} else {
 				thumbnail = tmpIcon;
 			}
-			tmpIcon = null; // 解放されてるのか？
+			tmpIcon = null;
 		}
 
 		@Override
