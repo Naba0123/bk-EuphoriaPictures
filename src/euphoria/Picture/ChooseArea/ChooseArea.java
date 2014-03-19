@@ -9,6 +9,10 @@ import javax.swing.JPanel;
 
 public class ChooseArea extends JPanel {
 
+	static JLabel chooseText;
+	static ChooseShow chooseShow;
+	static ChooseFile chooseFile;
+
 	public ChooseArea() {
 
 		// ChooseAreaの初期設定
@@ -17,12 +21,12 @@ public class ChooseArea extends JPanel {
 		GridBagConstraints gbc = new GridBagConstraints();
 
 		// 各コンポーネントの定義
-		ChooseText text = new ChooseText("選択されていません"); // ファイル名とか
-		ChooseShow show = new ChooseShow(); // 選択した画像の表示
-		ChooseFile button = new ChooseFile(text, show, "画像の選択"); // 選択ボタン
+		chooseText = new JLabel("選択されていません"); // ファイル名とか
+		chooseShow = new ChooseShow(); // 選択した画像の表示
+		chooseFile = new ChooseFile("画像の選択"); // 選択ボタン
 
 		// chooseFileTextの設定
-		text.setHorizontalAlignment(JLabel.RIGHT); // 右寄せ
+		chooseText.setHorizontalAlignment(JLabel.RIGHT); // 右寄せ
 
 		// 各コンポーネントのgridの設定
 		gbc.gridx = 0;
@@ -31,22 +35,22 @@ public class ChooseArea extends JPanel {
 		gbc.weighty = 0.0d;
 		gbc.insets = new Insets(5, 10, 10, 10);
 		gbc.anchor = GridBagConstraints.EAST;
-		layout.setConstraints(text, gbc);
+		layout.setConstraints(chooseText, gbc);
 		gbc.gridx = 1;
 		gbc.weightx = 0.0d;
-		layout.setConstraints(button, gbc);
+		layout.setConstraints(chooseFile, gbc);
 		gbc.gridx = 0;
 		gbc.gridy = 1;
 		gbc.gridwidth = 2;
 		gbc.weightx = 1.0d;
 		gbc.weighty = 1.0d;
 		gbc.fill = GridBagConstraints.BOTH;
-		layout.setConstraints(show, gbc);
+		layout.setConstraints(chooseShow, gbc);
 
 		// 各コンポーネントの組み込み
-		add(show);
-		add(text);
-		add(button);
+		add(chooseShow);
+		add(chooseText);
+		add(chooseFile);
 
 	}
 
