@@ -23,7 +23,7 @@ public class ChooseArea extends JPanel {
 		// 各コンポーネントの定義
 		chooseText = new JLabel("選択されていません"); // ファイル名とか
 		chooseShow = new ChooseShow(); // 選択した画像の表示
-		chooseFile = new ChooseFile("画像の選択"); // 選択ボタン
+		chooseFile = new ChooseFile("写真の選択"); // 選択ボタン
 
 		// chooseFileTextの設定
 		chooseText.setHorizontalAlignment(JLabel.RIGHT); // 右寄せ

@@ -68,6 +68,7 @@ public class CommentArea extends JPanel {
 	private void gridSetUp() {
 		// 各コンポーネントのgridの設定
 
+		gbc.anchor = GridBagConstraints.CENTER;
 		// Label
 		gbc.weightx = 0.0d;
 		gbc.insets = new Insets(5, 10, 5, 3);

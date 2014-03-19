@@ -1,6 +1,5 @@
 package euphoria;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
@@ -16,7 +15,7 @@ import javax.swing.border.TitledBorder;
 
 import euphoria.Picture.ChooseArea.ChooseArea;
 import euphoria.Picture.CommentArea.CommentArea;
-import euphoria.Picture.ConfigArea.ConfigArea;
+import euphoria.Picture.DoArea.DoArea;
 
 /**
  * メインフレームのクラス
@@ -40,7 +39,7 @@ public class MainFrame extends JFrame {
 	// 各コンポーネントの定義
 	private ChooseArea choose;
 	private CommentArea comment;
-	private ConfigArea upload;
+	private DoArea upload;
 
 	// 初期化フィールド
 	{
@@ -64,12 +63,9 @@ public class MainFrame extends JFrame {
 		// 各コンポーネントの定義
 		choose = new ChooseArea();
 		comment = new CommentArea();
-		upload = new ConfigArea();
+		upload = new DoArea();
 
-		// GridBagLayoutの定義
-		layout = new GridBagLayout();
-		setLayout(layout);
-		gbc = new GridBagConstraints();
+		// GridBagLayoutの設定
 		gridSetUp();
 
 		// TitledBorderの設定
@@ -91,8 +87,6 @@ public class MainFrame extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// 画面中央に表示
 		setLocationRelativeTo(null);
-		// レイアウト方式はBorderLayout
-		setLayout(new BorderLayout());
 		// 最小サイズの設定
 		setMinimumSize(new Dimension(minWidth, minHeight));
 
@@ -105,6 +99,11 @@ public class MainFrame extends JFrame {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
+		// Gridの定義
+		layout = new GridBagLayout();
+		setLayout(layout);
+		gbc = new GridBagConstraints();
 	}
 
 	private void gridSetUp() {
