@@ -28,6 +28,11 @@ public class DoSFTPTest extends JButton implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 
+		DoTest.checkSettingResult.setText("");
+		DoTest.checkConnectResult.setText("");
+		DoTest.checkFileTransportResult.setText("");
+		DoTest.testResult.setText("");
+
 		// 設定テスト
 		if (checkSetting()) {
 		} else {
