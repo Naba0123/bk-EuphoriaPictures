@@ -51,7 +51,7 @@ public class DoArea extends JPanel {
 
 		// コンポーネントの定義
 		ButtonSetting setting = new ButtonSetting("アップロード設定");
-		ButtonTest test = new ButtonTest("接続確認");
+		ButtonTest test = new ButtonTest("接続テスト");
 		JButton upload = new JButton("アップロード実行");
 
 		// gridBagLayoutの設定

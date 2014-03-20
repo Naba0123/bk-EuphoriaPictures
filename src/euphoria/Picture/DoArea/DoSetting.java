@@ -51,8 +51,8 @@ public class DoSetting extends JFrame {
 
 	// 初期化フィールド
 	{
-		width = 480;
-		height = 280;
+		width = 500;
+		height = 300;
 		minWidth = 380;
 		minHeight = 280;
 		title = "アップロード設定";
@@ -190,7 +190,7 @@ public class DoSetting extends JFrame {
 	}
 
 	private void titledSetUp() {
-		// choose
+		// settingPanel
 		LineBorder settingBorder = new LineBorder(Color.black, 1);
 		TitledBorder settingTitle = new TitledBorder(settingBorder, "SFTP情報");
 		settingPanel.setBorder(settingTitle);

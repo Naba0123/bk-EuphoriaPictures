@@ -46,7 +46,7 @@ public class SettingOK extends JButton implements ActionListener {
 		return true;
 	}
 
-	private void updateSetting() {
+	static void updateSetting() {
 		DoArea.userNameField.setText(DoSetting.tmpUserName.getText());
 		DoArea.passWordField.setText(DoSetting.tmpPassWord.getText());
 		DoArea.keyPathField.setText(DoSetting.tmpKeyPath.getText());
