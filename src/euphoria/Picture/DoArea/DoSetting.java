@@ -1,6 +1,7 @@
 package euphoria.Picture.DoArea;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -11,12 +12,16 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
+import javax.swing.border.TitledBorder;
 
 public class DoSetting extends JFrame {
 
 	// 枠JPanelの定義
 	JPanel settingPanel;
 	JPanel selectPanel;
+	JPanel settingBorderPanel;
 
 	// selectButtonの定義
 	SettingOK settingOK;
@@ -47,9 +52,9 @@ public class DoSetting extends JFrame {
 	// 初期化フィールド
 	{
 		width = 480;
-		height = 260;
+		height = 280;
 		minWidth = 380;
-		minHeight = 260;
+		minHeight = 280;
 		title = "アップロード設定";
 
 		tmpUserName = new JTextField(DoArea.userNameField.getText());
@@ -62,9 +67,11 @@ public class DoSetting extends JFrame {
 
 		settingPanel = new JPanel();
 		selectPanel = new JPanel();
+		settingBorderPanel = new JPanel();
 
 		settingOK = new SettingOK();
 		settingCancel = new SettingCancel();
+
 	}
 
 	DoSetting() {
@@ -76,8 +83,11 @@ public class DoSetting extends JFrame {
 		// Gridの設定
 		setGrid();
 
+		// タイトルバーの設定
+		titledSetUp();
+
 		// コンポーネントの追加
-		addCompornents();
+		addComponents();
 
 	}
 
@@ -103,28 +113,33 @@ public class DoSetting extends JFrame {
 		settingPanel.setLayout(layout);
 		gbc = new GridBagConstraints();
 
+		// フレームの余白
+		settingBorderPanel.setLayout(new BorderLayout());
+		settingBorderPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+
 	}
 
 	private void setGrid() {
-		gbc.insets = new Insets(5, 15, 5, 5);
+		gbc.insets = new Insets(5, 10, 5, 5);
 		layout.addLayoutComponent(DoArea.userNameLabel, gbc);
 		gbc.gridy = 1;
 		layout.addLayoutComponent(DoArea.passWordLabel, gbc);
 		gbc.gridy = 2;
 		layout.addLayoutComponent(DoArea.keyPathLabel, gbc);
 		gbc.gridx = 2;
-		gbc.insets = new Insets(5, 5, 5, 15);
+		gbc.insets = new Insets(5, 5, 5, 10);
 		layout.addLayoutComponent(tmpKeyPathButton, gbc);
 		gbc.gridx = 0;
 		gbc.gridy = 3;
-		gbc.insets = new Insets(5, 15, 5, 5);
+		gbc.insets = new Insets(5, 10, 5, 5);
 		layout.addLayoutComponent(DoArea.hostNameLabel, gbc);
 		gbc.gridy = 4;
 		layout.addLayoutComponent(DoArea.portNumberLabel, gbc);
 		gbc.gridy = 5;
+		gbc.insets = new Insets(5, 10, 5, 5);
 		layout.addLayoutComponent(DoArea.uploadPathLabel, gbc);
 
-		gbc.insets = new Insets(5, 5, 5, 15);
+		gbc.insets = new Insets(5, 5, 5, 10);
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		gbc.gridx = 1;
 		gbc.gridy = 0;
@@ -139,7 +154,7 @@ public class DoSetting extends JFrame {
 		layout.addLayoutComponent(tmpKeyPath, gbc);
 		gbc.gridwidth = 2;
 		gbc.gridy = 3;
-		gbc.insets = new Insets(5, 5, 5, 15);
+		gbc.insets = new Insets(5, 5, 5, 10);
 		layout.addLayoutComponent(tmpHostName, gbc);
 		gbc.gridy = 4;
 		layout.addLayoutComponent(tmpPortNumber, gbc);
@@ -148,7 +163,7 @@ public class DoSetting extends JFrame {
 
 	}
 
-	private void addCompornents() {
+	private void addComponents() {
 		// コンポーネント追加
 		settingPanel.add(DoArea.userNameLabel);
 		settingPanel.add(tmpUserName);
@@ -169,8 +184,16 @@ public class DoSetting extends JFrame {
 		selectPanel.add(settingCancel);
 
 		// パネルの追加
-		add(settingPanel, BorderLayout.CENTER);
+		settingBorderPanel.add(settingPanel, BorderLayout.CENTER);
 		add(selectPanel, BorderLayout.SOUTH);
+		add(settingBorderPanel, BorderLayout.CENTER);
+	}
+
+	private void titledSetUp() {
+		// choose
+		LineBorder settingBorder = new LineBorder(Color.black, 1);
+		TitledBorder settingTitle = new TitledBorder(settingBorder, "SFTP情報");
+		settingPanel.setBorder(settingTitle);
 	}
 
 }
