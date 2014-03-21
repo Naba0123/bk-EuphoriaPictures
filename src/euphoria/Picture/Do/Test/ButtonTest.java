@@ -1,4 +1,4 @@
-package euphoria.Picture.DoArea;
+package euphoria.Picture.Do.Test;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,7 +7,7 @@ import javax.swing.JButton;
 
 public class ButtonTest extends JButton implements ActionListener {
 
-	ButtonTest(String title) {
+	public ButtonTest(String title) {
 		setText(title);
 		this.addActionListener(this);
 	}

@@ -1,4 +1,4 @@
-package euphoria.Picture.DoArea;
+package euphoria.Picture.Do;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -8,21 +8,24 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import euphoria.Picture.Do.Setting.ButtonSetting;
+import euphoria.Picture.Do.Test.ButtonTest;
+
 public class DoArea extends JPanel {
 
-	static JLabel userNameLabel;
-	static JLabel passWordLabel;
-	static JLabel keyPathLabel;
-	static JLabel hostNameLabel;
-	static JLabel portNumberLabel;
-	static JLabel uploadPathLabel;
+	public static JLabel userNameLabel;
+	public static JLabel passWordLabel;
+	public static JLabel keyPathLabel;
+	public static JLabel hostNameLabel;
+	public static JLabel portNumberLabel;
+	public static JLabel uploadPathLabel;
 
-	static JLabel userNameField;
-	static JLabel passWordField;
-	static JLabel keyPathField;
-	static JLabel hostNameField;
-	static JLabel portNumberField;
-	static JLabel uploadPathField;
+	public static JLabel userNameField;
+	public static JLabel passWordField;
+	public static JLabel keyPathField;
+	public static JLabel hostNameField;
+	public static JLabel portNumberField;
+	public static JLabel uploadPathField;
 
 	// 初期化
 	{

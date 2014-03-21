@@ -1,4 +1,4 @@
-package euphoria.Picture.DoArea;
+package euphoria.Picture.Do.Test;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -13,6 +13,8 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
+
+import euphoria.Picture.Do.Setting.SettingCancel;
 
 public class DoTest extends JFrame {
 

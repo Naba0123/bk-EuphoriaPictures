@@ -1,4 +1,4 @@
-package euphoria.Picture.DoArea;
+package euphoria.Picture.Do.Setting;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

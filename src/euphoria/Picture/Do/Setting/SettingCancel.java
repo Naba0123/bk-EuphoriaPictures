@@ -1,4 +1,4 @@
-package euphoria.Picture.DoArea;
+package euphoria.Picture.Do.Setting;
 
 import java.awt.Component;
 import java.awt.Window;
@@ -10,7 +10,7 @@ import javax.swing.SwingUtilities;
 
 public class SettingCancel extends JButton implements ActionListener {
 
-	SettingCancel() {
+	public SettingCancel() {
 		setText("キャンセル");
 		addActionListener(this);
 	}
