@@ -1,4 +1,4 @@
-package euphoria.Picture.Do.Test;
+package euphoria.pictures.doTest;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

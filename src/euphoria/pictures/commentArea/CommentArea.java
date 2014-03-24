@@ -1,4 +1,4 @@
-package euphoria.Picture.CommentArea;
+package euphoria.pictures.commentArea;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;

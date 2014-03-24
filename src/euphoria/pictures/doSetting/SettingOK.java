@@ -1,4 +1,4 @@
-package euphoria.Picture.Do.Setting;
+package euphoria.pictures.doSetting;
 
 import java.awt.Component;
 import java.awt.Window;
@@ -10,7 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
-import euphoria.Picture.Do.DoArea;
+import euphoria.pictures.doArea.DoArea;
 
 public class SettingOK extends JButton implements ActionListener {
 

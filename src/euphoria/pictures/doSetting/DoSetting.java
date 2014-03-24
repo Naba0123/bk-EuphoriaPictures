@@ -1,4 +1,4 @@
-package euphoria.Picture.Do.Setting;
+package euphoria.pictures.doSetting;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -16,7 +16,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 
-import euphoria.Picture.Do.DoArea;
+import euphoria.pictures.doArea.DoArea;
 
 public class DoSetting extends JFrame {
 

@@ -1,4 +1,4 @@
-package euphoria.Picture.Do;
+package euphoria.pictures.doArea;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -8,8 +8,8 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import euphoria.Picture.Do.Setting.ButtonSetting;
-import euphoria.Picture.Do.Test.ButtonTest;
+import euphoria.pictures.doSetting.ButtonSetting;
+import euphoria.pictures.doTest.ButtonTest;
 
 public class DoArea extends JPanel {
 

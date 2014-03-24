@@ -1,4 +1,4 @@
-package euphoria.Picture.Do.Setting;
+package euphoria.pictures.doSetting;
 
 import java.awt.Component;
 import java.awt.Window;

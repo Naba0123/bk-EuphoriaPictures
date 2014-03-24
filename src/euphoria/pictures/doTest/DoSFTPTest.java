@@ -1,4 +1,4 @@
-package euphoria.Picture.Do.Test;
+package euphoria.pictures.doTest;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,7 +13,7 @@ import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
 import com.jcraft.jsch.SftpException;
 
-import euphoria.Picture.Do.DoArea;
+import euphoria.pictures.doArea.DoArea;
 
 public class DoSFTPTest extends JButton implements ActionListener {
 

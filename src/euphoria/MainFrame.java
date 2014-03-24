@@ -13,9 +13,9 @@ import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 
-import euphoria.Picture.ChooseArea.ChooseArea;
-import euphoria.Picture.CommentArea.CommentArea;
-import euphoria.Picture.Do.DoArea;
+import euphoria.pictures.chooseArea.ChooseArea;
+import euphoria.pictures.commentArea.CommentArea;
+import euphoria.pictures.doArea.DoArea;
 
 /**
  * メインフレームのクラス

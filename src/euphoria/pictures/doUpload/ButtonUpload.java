@@ -1,4 +1,4 @@
-package euphoria.Picture.Do.Upload;
+package euphoria.pictures.doUpload;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

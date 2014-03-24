@@ -1,4 +1,4 @@
-package euphoria.Picture.ChooseArea;
+package euphoria.pictures.chooseArea;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;

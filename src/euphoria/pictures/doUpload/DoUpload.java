@@ -1,4 +1,4 @@
-package euphoria.Picture.Do.Upload;
+package euphoria.pictures.doUpload;
 
 import javax.swing.JFrame;
 
