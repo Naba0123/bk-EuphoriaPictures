@@ -1,11 +1,13 @@
 package euphoria.pictures.doTest;
 
 import java.awt.Color;
+import java.awt.Dialog;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -16,7 +18,7 @@ import javax.swing.border.TitledBorder;
 
 import euphoria.pictures.doSetting.SettingCancel;
 
-public class DoTest extends JFrame {
+public class DoTest extends JDialog {
 
 	// Panelの設定
 	private JPanel textPanel;
@@ -85,6 +87,8 @@ public class DoTest extends JFrame {
 	}
 
 	private void startUp() {
+		// 他フレームの操作を拒否させる
+		setModalityType(Dialog.DEFAULT_MODALITY_TYPE);
 		// 閉じるボタンでウィンドウを閉じる
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		// 画面中央に表示
