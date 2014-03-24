@@ -2,20 +2,18 @@ package euphoria;
 
 import java.awt.Color;
 import java.awt.Container;
-import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 
 import javax.swing.JFrame;
-import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 
 import euphoria.pictures.chooseArea.ChooseArea;
 import euphoria.pictures.commentArea.CommentArea;
 import euphoria.pictures.doArea.DoArea;
+import euphoria.setup.ProgramSet;
 
 /**
  * メインフレームのクラス
@@ -56,8 +54,7 @@ public class MainFrame extends JFrame {
 	public MainFrame() {
 
 		// メインフレーム設定
-		setSize(width, height);
-		setTitle(title);
+		ProgramSet.FrameSet(this, title, width, height, minWidth, minHeight, JFrame.EXIT_ON_CLOSE);
 		startUp();
 
 		// 各コンポーネントの定義
@@ -83,23 +80,6 @@ public class MainFrame extends JFrame {
 	 * ウィンドウの初期処理をしてくれるメソッド
 	 */
 	private void startUp() {
-		// 閉じるボタンでプログラム終了
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		// 画面中央に表示
-		setLocationRelativeTo(null);
-		// 最小サイズの設定
-		setMinimumSize(new Dimension(minWidth, minHeight));
-
-		// ウィンドウのUIはWindowsで
-		String lafClassName = "com.sun.java.swing.plaf.windows.WindowsLookAndFeel";
-		// String lafClassName = "javax.swing.plaf.nimbus.NimbusLookAndFeel";
-		try {
-			UIManager.setLookAndFeel(lafClassName);
-			SwingUtilities.updateComponentTreeUI(this);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
 		// Gridの定義
 		layout = new GridBagLayout();
 		setLayout(layout);

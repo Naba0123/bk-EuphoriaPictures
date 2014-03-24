@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
 import euphoria.pictures.doArea.DoArea;
+import euphoria.setup.ConfigurationXML;
 
 public class SettingOK extends JButton implements ActionListener {
 
@@ -55,6 +56,14 @@ public class SettingOK extends JButton implements ActionListener {
 		DoArea.hostNameField.setText(DoSetting.tmpHostName.getText());
 		DoArea.portNumberField.setText(DoSetting.tmpPortNumber.getText());
 		DoArea.uploadPathField.setText(DoSetting.tmpUploadPath.getText());
+
+		ConfigurationXML.setProperty(DoArea.configUserName, DoSetting.tmpUserName.getText());
+		ConfigurationXML.setProperty(DoArea.configPassWord, DoSetting.tmpPassWord.getText());
+		ConfigurationXML.setProperty(DoArea.configKeyPath, DoSetting.tmpKeyPath.getText());
+		ConfigurationXML.setProperty(DoArea.configHostName, DoSetting.tmpHostName.getText());
+		ConfigurationXML.setProperty(DoArea.configPortNumber, DoSetting.tmpPortNumber.getText());
+		ConfigurationXML.setProperty(DoArea.configUploadPath, DoSetting.tmpUploadPath.getText());
+		ConfigurationXML.storeToXML(DoArea.configuration, DoArea.configComment);
 	}
 
 }

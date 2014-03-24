@@ -13,8 +13,8 @@ public class ButtonUpload extends JButton implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		DoUpload ds = new DoUpload();
-		ds.setVisible(true);
+		DoUpload du = new DoUpload();
+		du.setVisible(true);
 	}
 
 }

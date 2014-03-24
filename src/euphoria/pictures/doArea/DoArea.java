@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 
 import euphoria.pictures.doSetting.ButtonSetting;
 import euphoria.pictures.doTest.ButtonTest;
+import euphoria.setup.ConfigurationXML;
 
 public class DoArea extends JPanel {
 
@@ -27,6 +28,15 @@ public class DoArea extends JPanel {
 	public static JLabel portNumberField;
 	public static JLabel uploadPathField;
 
+	public static String configuration;
+	public static String configComment;
+	public static String configUserName;
+	public static String configPassWord;
+	public static String configKeyPath;
+	public static String configHostName;
+	public static String configPortNumber;
+	public static String configUploadPath;
+
 	// 初期化
 	{
 		// Label
@@ -43,9 +53,21 @@ public class DoArea extends JPanel {
 		hostNameField = new JLabel("hogehoge.com");
 		portNumberField = new JLabel("22");
 		uploadPathField = new JLabel("/var/www/tmp/");
+		// Configuration
+		configuration = "config.xml";
+		configComment = "Euphoria Pictures用設定ファイル";
+		configUserName = "username";
+		configPassWord = "password";
+		configKeyPath = "keypath";
+		configHostName = "hostname";
+		configPortNumber = "port";
+		configUploadPath = "upload";
 	}
 
 	public DoArea() {
+
+		// 設定ファイルの読み込み
+		setConfig();
 
 		// 初期設定
 		GridBagLayout layout = new GridBagLayout();
@@ -72,6 +94,18 @@ public class DoArea extends JPanel {
 		add(test);
 		add(upload);
 
+	}
+
+	private void setConfig() {
+		new ConfigurationXML();
+		if (ConfigurationXML.loadXML(configuration)) {
+			userNameField.setText(ConfigurationXML.getProperty(configUserName));
+			passWordField.setText(ConfigurationXML.getProperty(configPassWord));
+			keyPathField.setText(ConfigurationXML.getProperty(configKeyPath));
+			hostNameField.setText(ConfigurationXML.getProperty(configHostName));
+			portNumberField.setText(ConfigurationXML.getProperty(configPortNumber));
+			uploadPathField.setText(ConfigurationXML.getProperty(configUploadPath));
+		}
 	}
 
 }
