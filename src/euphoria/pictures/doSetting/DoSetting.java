@@ -11,6 +11,7 @@ import java.awt.Insets;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
@@ -46,7 +47,7 @@ public class DoSetting extends JDialog {
 
 	// 一時変数
 	static JTextField tmpUserName;
-	static JTextField tmpPassWord;
+	static JPasswordField tmpPassWord;
 	static ChooseKey tmpKeyPathButton;
 	static JTextField tmpKeyPath;
 	static JTextField tmpHostName;
@@ -62,7 +63,7 @@ public class DoSetting extends JDialog {
 		title = "アップロード設定";
 
 		tmpUserName = new JTextField(DoArea.userNameField.getText());
-		tmpPassWord = new JTextField(DoArea.passWordField.getText());
+		tmpPassWord = new JPasswordField(DoArea.passWordField.getText());
 		tmpKeyPathButton = new ChooseKey("秘密鍵の選択");
 		tmpKeyPath = new JTextField(DoArea.keyPathField.getText());
 		tmpHostName = new JTextField(DoArea.hostNameField.getText());

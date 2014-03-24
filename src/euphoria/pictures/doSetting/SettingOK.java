@@ -36,7 +36,7 @@ public class SettingOK extends JButton implements ActionListener {
 	private boolean checkSetting() {
 		if (DoSetting.tmpUserName.getText().isEmpty())
 			return false;
-		if (DoSetting.tmpPassWord.getText().isEmpty())
+		if (new String(DoSetting.tmpPassWord.getPassword()).isEmpty())
 			return false;
 		if (DoSetting.tmpKeyPath.getText().isEmpty())
 			return false;
@@ -51,14 +51,13 @@ public class SettingOK extends JButton implements ActionListener {
 
 	static void updateSetting() {
 		DoArea.userNameField.setText(DoSetting.tmpUserName.getText());
-		DoArea.passWordField.setText(DoSetting.tmpPassWord.getText());
+		DoArea.passWordField.setText(new String(DoSetting.tmpPassWord.getPassword()));
 		DoArea.keyPathField.setText(DoSetting.tmpKeyPath.getText());
 		DoArea.hostNameField.setText(DoSetting.tmpHostName.getText());
 		DoArea.portNumberField.setText(DoSetting.tmpPortNumber.getText());
 		DoArea.uploadPathField.setText(DoSetting.tmpUploadPath.getText());
 
 		ConfigurationXML.setProperty(DoArea.configUserName, DoSetting.tmpUserName.getText());
-		ConfigurationXML.setProperty(DoArea.configPassWord, DoSetting.tmpPassWord.getText());
 		ConfigurationXML.setProperty(DoArea.configKeyPath, DoSetting.tmpKeyPath.getText());
 		ConfigurationXML.setProperty(DoArea.configHostName, DoSetting.tmpHostName.getText());
 		ConfigurationXML.setProperty(DoArea.configPortNumber, DoSetting.tmpPortNumber.getText());

@@ -48,7 +48,7 @@ public class DoArea extends JPanel {
 		uploadPathLabel = new JLabel("アップロード先");
 		// TextField
 		userNameField = new JLabel("USERNAME");
-		passWordField = new JLabel("PASSWORD");
+		passWordField = new JLabel("");
 		keyPathField = new JLabel("c:\\");
 		hostNameField = new JLabel("hogehoge.com");
 		portNumberField = new JLabel("22");
@@ -100,7 +100,6 @@ public class DoArea extends JPanel {
 		new ConfigurationXML();
 		if (ConfigurationXML.loadXML(configuration)) {
 			userNameField.setText(ConfigurationXML.getProperty(configUserName));
-			passWordField.setText(ConfigurationXML.getProperty(configPassWord));
 			keyPathField.setText(ConfigurationXML.getProperty(configKeyPath));
 			hostNameField.setText(ConfigurationXML.getProperty(configHostName));
 			portNumberField.setText(ConfigurationXML.getProperty(configPortNumber));
