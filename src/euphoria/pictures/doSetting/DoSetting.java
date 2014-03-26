@@ -79,7 +79,7 @@ public class DoSetting extends JDialog {
 
 	}
 
-	DoSetting() {
+	public DoSetting() {
 		// メインフレーム設定
 		setSize(width, height);
 		setTitle(title);
@@ -93,6 +93,8 @@ public class DoSetting extends JDialog {
 
 		// コンポーネントの追加
 		addComponents();
+
+		setVisible(true);
 
 	}
 

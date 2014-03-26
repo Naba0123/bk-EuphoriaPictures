@@ -39,7 +39,7 @@ public class DoSFTPTest extends JButton implements ActionListener {
 		if (checkSetting()) {
 		} else {
 			DoTest.checkSettingResult.setText("NG");
-			DoTest.testResult.setText("接続テストに失敗しましたよ。");
+			DoTest.testResult.setText("アップロード設定に問題があります");
 			return;
 		}
 		DoTest.checkSettingResult.setText("OK");
@@ -59,7 +59,7 @@ public class DoSFTPTest extends JButton implements ActionListener {
 		} catch (JSchException es) {
 			es.printStackTrace();
 			DoTest.checkConnectResult.setText("NG");
-			DoTest.testResult.setText("接続テストに失敗しました");
+			DoTest.testResult.setText("コネクション確立に失敗しました");
 			return;
 		}
 		DoTest.checkConnectResult.setText("OK");
@@ -79,7 +79,7 @@ public class DoSFTPTest extends JButton implements ActionListener {
 		} catch (JSchException | SftpException | UnsupportedEncodingException es) {
 			es.printStackTrace();
 			DoTest.checkFileTransportResult.setText("NG");
-			DoTest.testResult.setText("接続できませんでした。");
+			DoTest.testResult.setText("ファイル転送に失敗しました");
 			return;
 		}
 

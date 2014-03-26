@@ -3,16 +3,19 @@ package euphoria.pictures.doArea;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import euphoria.pictures.doSetting.ButtonSetting;
-import euphoria.pictures.doTest.ButtonTest;
+import euphoria.pictures.doSetting.DoSetting;
+import euphoria.pictures.doTest.DoTest;
+import euphoria.pictures.doUpload.DoUpload;
 import euphoria.setup.ConfigurationXML;
 
-public class DoArea extends JPanel {
+public class DoArea extends JPanel implements ActionListener {
 
 	public static JLabel userNameLabel;
 	public static JLabel passWordLabel;
@@ -75,9 +78,17 @@ public class DoArea extends JPanel {
 		GridBagConstraints gbc = new GridBagConstraints();
 
 		// コンポーネントの定義
-		ButtonSetting setting = new ButtonSetting("アップロード設定");
-		ButtonTest test = new ButtonTest("接続テスト");
+		JButton setting = new JButton("アップロード設定");
+		JButton test = new JButton("接続テスト");
 		JButton upload = new JButton("アップロード実行");
+
+		// コンポーネントのアクション設定
+		setting.addActionListener(this);
+		setting.setActionCommand("setting");
+		test.addActionListener(this);
+		test.setActionCommand("test");
+		upload.addActionListener(this);
+		upload.setActionCommand("upload");
 
 		// gridBagLayoutの設定
 		gbc.insets = new Insets(5, 5, 5, 5);
@@ -104,6 +115,18 @@ public class DoArea extends JPanel {
 			hostNameField.setText(ConfigurationXML.getProperty(configHostName));
 			portNumberField.setText(ConfigurationXML.getProperty(configPortNumber));
 			uploadPathField.setText(ConfigurationXML.getProperty(configUploadPath));
+		}
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		String command = e.getActionCommand();
+		if (command.equals("setting")) {
+			new DoSetting();
+		} else if (command.equals("test")) {
+			new DoTest();
+		} else if (command.equals("upload")) {
+			new DoUpload();
 		}
 	}
 

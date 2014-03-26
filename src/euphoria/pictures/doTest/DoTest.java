@@ -72,7 +72,7 @@ public class DoTest extends JDialog {
 		checkFileTransportResult = new JLabel();
 	}
 
-	DoTest() {
+	public DoTest() {
 
 		setSize(width, height);
 		setTitle(title);
@@ -83,6 +83,8 @@ public class DoTest extends JDialog {
 		titledSetUp();
 
 		addComponents();
+
+		setVisible(true);
 
 	}
 
